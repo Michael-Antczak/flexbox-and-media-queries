@@ -1,0 +1,78 @@
+/* This is all shown by default
+  from 0px all the way up to 599px */
+
+body {
+  background: red;
+  margin: 20px;
+}
+
+.box {
+  border: 3px solid black;
+  margin-bottom: 10px;
+}
+
+h2 {
+  text-align: center;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+/* All the CSS above apply always unless overridden by
+  the below media queries  */
+
+/* Apllied for the width between 600px and 799px*/
+
+@media (min-width: 600px) {
+  body {
+    background: green;
+  }
+
+  .wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .box {
+    width: 40%;
+  }
+}
+
+/* Apllied for the width between 800px and 999px*/
+
+@media (min-width: 800px) {
+  body {
+    background: blue;
+  }
+
+  .wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .box {
+    width: 30%;
+  }
+}
+
+/* Apllied for the width greater than 999px*/
+
+@media (min-width: 1000px) {
+
+  body {
+    background: #777;
+  }
+
+  .wrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .box {
+    width: 15%;
+    height: 300px;
+  }
+}
